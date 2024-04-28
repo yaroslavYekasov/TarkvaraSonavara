@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Tarkvara sõnad</title>
-    <!-- Lisame JavaScripti faili -->
-    <script src="tarkvarascript.js"></script>
+  <script src="tarkvarascript.js"></script>
 </head>
 
 <body>
 <header>
-  <!-- Pealkiri -->
   Tarkvara sõnad
 </header>
-<!-- Nupp juhuslike sõnade genereerimiseks -->
 <input type="button" value="juhuslik sõna" onclick="randomSyna()">
 <br>
 <br>
-<!-- Juhusliku sõna kuvamine -->
 <div id="random-sona"></div>
-<!-- Sisendväli venekeelse sõna kontrolliks -->
 <lable for="kontroll">Krijuta sõna vene keeles</lable>
 <input type="text" id="kontroll" onchange="sonakontroll()">
-<!-- Vastuse kuvamine -->
 <div id ="vastus"></div>
 
 </body>
