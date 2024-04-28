@@ -3,99 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Tarkvara sõnad</title>
-    <script>
-        function randomSona(){
-            const sonad = [
-                'teostus',
-                'algoritm',
-                'kavand',
-                'kasutajaliides',
-                'mudel',
-                'andmebaasiskeem',
-                'standart',
-                'tsükkel',
-                'andmetöötlus',
-                'andmestruktuur',
-                'arenduskeskkond',
-                'projektihaldus tööriist',
-                'kavandamine',
-                'iteratsioon',
-                'parandus',
-                'parandamine',
-
-                'koskmudel',
-                'agiilne mudel',
-                'spiraalne mudel',
-                'inkrementaalne mudel',
-                'nõudmised',
-                'realiserimine',
-                'testimine',
-                'integreerimine',
-                'kasutamine',
-                'hooldus',
-                'eelised',
-                'puudused',
-                'elutsükkel',
-                'arendamine',
-                'valideerimine'
-            ];
-            const juhuslikSonaIndex = Math.floor(Math.random() * sonad.length);
-            const juhuslikSona = sonad[juhuslikSonaIndex];
-            document.getElementById("random-sona").innerHTML = juhuslikSona;
-        }
-
-        function kontrollSona() {
-            const sonad = {
-                'teostus': 'выполнение',
-                'algoritm': 'алгоритм',
-                'kavand': 'план',
-                'kasutajaliides': 'пользовательский интерфейс',
-                'mudel': 'модель',
-                'andmebaasiskeem': 'схема базы данных',
-                'standart': 'стандарт',
-                'tsükkel': 'цикл',
-                'andmetöötlus': 'обработка данных',
-                'andmestruktuur': 'структура данных',
-                'arenduskeskkond': 'среда разработки',
-                'projektihaldus tööriist': 'инструмент управления проектами',
-                'kavandamine': 'планирование',
-                'iteratsioon': 'итерация',
-                'parandus': 'исправление',
-                'parandamine': 'улучшение',
-                'koskmudel': 'косвенная модель',
-                'agiilne mudel': 'гибкая методология',
-                'spiraalne mudel': 'спиральная модель',
-                'inkrementaalne mudel': 'инкрементальная модель',
-                'nõudmised': 'требования',
-                'realiserimine': 'реализация',
-                'testimine': 'тестирование',
-                'integreerimine': 'интеграция',
-                'kasutamine': 'использование',
-                'hooldus': 'обслуживание',
-                'eelised': 'преимущества',
-                'puudused': 'недостатки',
-                'elutsükkel': 'жизненный цикл',
-                'arendamine': 'разработка',
-                'valideerimine': 'проверка'
-            };
-            const sisestatudSona = document.getElementById("kontroll").value.trim();
-            const juhuslikSona = document.getElementById("random-sona").innerHTML;
-
-            if (sisestatudSona === sonad[juhuslikSona]) {
-                document.getElementById("vastus").innerHTML = "Õige!";
-            } else {
-                document.getElementById("vastus").innerHTML = "Vale!";
-            }
-        }
-    </script>
+  <script src="tarkvarascript.js"></script>
 </head>
-<body>
-<h1>Tarkvara sõnad</h1>
-<input type="button" value="juhuslik sõna" onclick="randomSona()">
-<div id="random-sona"></div>
 
-<label for="kontroll">Kirjuta sõna vene keeles</label>
-<input type="text" id="kontroll" oninput="kontrollSona()">
-<div id="vastus"></div>
+<body>
+<header>
+  Tarkvara sõnad
+</header>
+<input type="button" value="juhuslik sõna" onclick="randomSyna()">
+<br>
+<br>
+<div id="random-sona"></div>
+<lable for="kontroll">Krijuta sõna vene keeles</lable>
+<input type="text" id="kontroll" onchange="sonakontroll()">
+<div id ="vastus"></div>
+
 </body>
 </html>
